@@ -10,9 +10,9 @@
             VerticalOptions="Center">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="200"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -22,24 +22,33 @@
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout Grid.Row="1" Grid.Column="0" x:Name="DeckPlayer1" VerticalOptions="Center">
-                    
+
                 </HorizontalStackLayout>
-                
                 <HorizontalStackLayout Grid.Row="2" Grid.Column="0">
                     <Button
                         Text="Double"
                         Clicked="OnDoubleClicked"
                     />
                     <Button
-                            Text="Graj"
-                            Clicked="OnPlayClicked" 
+                        Text="Graj"
+                        x:Name="Player1PlayButton"
+                        Clicked="OnPlayClicked" 
                     />
                     <Button
                             Text="Pass"
                             Clicked="OnPassClicked"
                     />
                 </HorizontalStackLayout>
+                
             </Grid>
+            <HorizontalStackLayout Spacing="20">
+                <Label
+                    Text="Test"
+                    x:Name="Player1Count"/>
+                <Label
+                    Text="Test"
+                    x:Name="Player2Count"/>     
+            </HorizontalStackLayout>
 
         </VerticalStackLayout>
     </ScrollView>
